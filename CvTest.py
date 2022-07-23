@@ -22,14 +22,3 @@ grayscaled_img = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
 # (x,y,w,h) = face_coordinates[0] (CAN'T WORK UNTIL FACE-COORDINATES DOES..)
 # cv.rectangle(image,(x+w,y+h),(x,y),(0,255,0),2)
-
-
-# Importing videos:-
-# GET A VIDEO TO START WITH;
-
-# TO re-shape the frame size:-
-def reScaleFrame(frame, scale=0.75):
-    width = int(frame.shape[1] * scale)
-    height = int(frame.shape[0] * scale)
-    dimensions = (width, height)
-    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
